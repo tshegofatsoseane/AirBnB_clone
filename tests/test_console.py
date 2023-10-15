@@ -729,7 +729,7 @@ class TestHBNBCommand_all(unittest.TestCase):
             pass
 
     def test_all_invalid_class(self):
-        correct = "** class doesn't exist **"
+        correct = "** class does not exist **"
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("all MyModel"))
             self.assertEqual(correct, output.getvalue().strip())
@@ -884,7 +884,7 @@ class TestHBNBCommand_update(unittest.TestCase):
             self.assertEqual(correct, output.getvalue().strip())
 
     def test_update_invalid_class(self):
-        correct = "** class doesn't exist **"
+        correct = "** class does not exist **"
         with patch("sys.stdout", new=StringIO()) as output:
             self.assertFalse(HBNBCommand().onecmd("update MyModel"))
             self.assertEqual(correct, output.getvalue().strip())
